@@ -13,10 +13,10 @@ $(document).ready(function() {
 
   });
 
- $(document).on('click', '.main-header__link', function() {
+  $(document).on('click', '.main-header__link', function() {
     let target = $(this).attr('href');
     if ($(window).width() >= 768) {
-      coordsScroll = $(target).offset().top - $('.main-header').outerHeight() 
+      coordsScroll = $(target).offset().top - $('.main-header').outerHeight()
     } else {
       coordsScroll = $(target).offset().top - $('.main-header').outerHeight()
     }
@@ -27,37 +27,37 @@ $(document).ready(function() {
   });
 
   (function() {
-  var topMenu = $(".main-header"),
-    activeClass = "main-header__link--active",
-    menuItems = topMenu.find(".main-header__list a"),
-    scrollItems = menuItems.map(function() {
-      var item = $($(this).attr("href"));
-      if (item.length) return item;
-    });
+    var topMenu = $(".main-header"),
+      activeClass = "main-header__link--active",
+      menuItems = topMenu.find(".main-header__list a"),
+      scrollItems = menuItems.map(function() {
+        var item = $($(this).attr("href"));
+        if (item.length) return item;
+      });
 
     if ($(window).width() >= 768) {
       topMenuHeight = topMenu.outerHeight() + topMenu.outerHeight()
     } else {
-     topMenuHeight = topMenu.outerHeight() + topMenu.outerHeight() 
+      topMenuHeight = topMenu.outerHeight() + topMenu.outerHeight()
     }
 
-  // Bind to scroll
-  $(window).scroll(function() {
-    var fromTop = $(this).scrollTop() + topMenuHeight;
+    // Bind to scroll
+    $(window).scroll(function() {
+      var fromTop = $(this).scrollTop() + topMenuHeight;
 
-    var cur = scrollItems.map(function(v, i) {
-      if ($(this).offset().top < fromTop) return this;
-    });
+      var cur = scrollItems.map(function(v, i) {
+        if ($(this).offset().top < fromTop) return this;
+      });
 
-    cur = cur[cur.length - 1] || scrollItems[0];
-    var id = cur && cur.length ? cur[0].id : "";
+      cur = cur[cur.length - 1] || scrollItems[0];
+      var id = cur && cur.length ? cur[0].id : "";
 
-    menuItems.removeClass(activeClass).filter("[href='#" + id + "']").addClass(activeClass);
-  })
+      menuItems.removeClass(activeClass).filter("[href='#" + id + "']").addClass(activeClass);
+    })
 
-})()
+  })()
 
- function validate(input, length, regExp, error, phone) {
+  function validate(input, length, regExp, error, phone) {
 
     $(input).on('blur keyup', function() {
       var value = $(this).val();
