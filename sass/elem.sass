@@ -1,0 +1,64 @@
+@import 'responsive'
+
+.elem
+	position: relative
+	background-color: #06060e
+	padding-bottom: 82px
+	+media(mdx)
+		padding-bottom: 60px
+	+media(sm)
+		padding-bottom: 40px
+	&:after
+		position: absolute
+		content: ' '
+		top: -280px
+		width: 100%	
+		height: 280px
+		background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%)
+	&__wrap
+		display: flex	
+		flex-wrap: wrap
+		margin: 0 -20px
+		+media(smx)
+			margin: 0px	
+
+	&__item
+		width: calc(100% / 4 - 40px)
+		margin: 0 20px
+		margin-bottom: 40px	
+		+media(lgs)
+			width: calc(100% / 3 - 40px)
+		+media(mdx)
+			width: calc(100% / 2 - 40px)
+		+media(sm)
+			width: 100%
+			max-width: 500px
+			margin: 0 auto
+			margin-bottom: 40px	
+
+	&__title
+		font-size: 24px	
+		line-height: 1.2	
+		color: #fff
+		text-transform: uppercase	
+		text-align: center
+		padding-bottom: 28px	
+		font-weight: 900	
+		font-family: Roboto
+		+media(mdx)
+			font-size: 21px
+		+media(sm)
+			font-size: 18px
+
+	&__image
+		margin-bottom: 35px	
+		img
+			display: block	
+			margin: 0 auto
+
+	&__text
+		p
+			font-size: 16px	
+			line-height: 1.5	
+			color: #fff
+			text-align: center

@@ -1,0 +1,49 @@
+@import 'responsive'
+
+.files
+	background-color: #06060e
+	padding-bottom: 75px
+	+media(mdx)
+		padding-bottom: 55px
+	+media(sm)
+		padding-bottom: 34px
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -20px
+		+media(sm)
+			margin: 0px
+
+	&__item
+		width: calc(100% / 3 - 40px)
+		background-color: #fff
+		padding: 35px
+		margin: 0 20px
+		margin-bottom: 40px
+		+media(mdx)
+			width: calc(100% / 2 - 40px)
+		+media(sm)
+			max-width: 500px
+			width: 100%
+			margin: 0 auto
+			margin-bottom: 40px
+
+	&__title
+		font-size: 24px
+		line-height: 1.2
+		text-transform: uppercase
+		padding-bottom: 20px
+		font-weight: 900
+		font-family: Roboto
+		+media(mdx)
+			font-size: 21px
+		+media(sm)
+			font-size: 18px
+
+	&__load
+		font-size: 18px
+		line-height: 1.2
+		color: #25ACC9
+		text-transform: uppercase
+		font-weight: 900
+		font-family: Roboto

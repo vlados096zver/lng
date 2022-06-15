@@ -1,0 +1,52 @@
+@import 'responsive'
+
+.desc
+	position: relative
+	margin-top: -180px
+	+media(mdx)
+		margin-top: -210px
+	&:after
+		position: absolute
+		content: ' '
+		z-index: 4
+		bottom: -280px
+		left: 0px
+		width: 100%
+		height: 280px
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, #000000 100%)
+
+	&__inner
+		background-color: #06060e
+
+	&__text
+		max-width: 800px
+		padding-bottom: 65px
+		margin: 0 auto
+		+media(mdx)
+			padding-bottom: 50px
+		+media(sm)
+			padding-bottom: 35px
+		p
+			font-size: 24px	
+			line-height: 1.4
+			color: #fff
+			text-align: center
+			font-weight: 800
+			+media(mdx)
+				font-size: 21px
+			+media(sm)
+				font-size: 18px
+
+	&__content
+		padding-bottom: 110px
+		+media(mdx)
+			padding-bottom: 80px
+		p
+			font-size: 20px
+			line-height: 1.4
+			color: #fff
+			text-align: center
+			+media(mdx)
+				font-size: 18px
+			+media(sm)
+				font-size: 16px

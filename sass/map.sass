@@ -1,0 +1,54 @@
+@import 'responsive'
+
+.map
+	background-image: url(../img/bg-map.png)
+	background-repeat: no-repeat
+	background-size: cover
+	position: relative
+	padding-top: 20px
+	padding-bottom: 120px	
+
+	&:before
+		position: absolute
+		content: ' '
+		top: 0px
+		left: 0px
+		width: 100%
+		height: 100%
+		background-color: rgba(0,0,0, 0.5)
+
+	&__image,
+	&__text
+		position: relative
+		z-index: 4
+
+	&__image
+		margin-bottom: 250px
+		+media(mdx)
+			margin-bottom: 180px	
+		+media(sm)
+			margin-bottom: 120px		
+
+	&__title
+		font-size: 64px	
+		line-height: 1.25	
+		color: #fff
+		text-transform: uppercase	
+		text-align: center
+		padding-bottom: 75px	
+		font-weight: 800	
+
+	&__text
+		max-width: 800px
+		margin: 0 auto
+		p
+			font-size: 24px	
+			line-height: 1.4
+			color: #fff
+			text-align: center
+			text-transform: uppercase	
+			font-weight: 800	
+			+media(mdx)
+				font-size: 21px	
+			+media(sm)
+				font-size: 18px
