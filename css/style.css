@@ -224,6 +224,11 @@ img {
 	color: #000;
 }
 
+.error {
+	color: #ff0000;
+	padding-bottom: 12px;
+}
+
 .main-header {
 	position: fixed;
 	top: 0px;
